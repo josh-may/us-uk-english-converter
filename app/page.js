@@ -219,7 +219,7 @@ function App() {
       <meta name="description" content="Easily convert American English to British English with our powerful US to UK English converter tool. Get accurate translations instantly!" />
       <meta name="keywords" content="US to UK English converter, American to British English, English conversion tool, convert American English, American English to British English" />
     </Head>
-    <div className="max-w-3xl mx-auto p-8 mt-10 bg-white rounded-lg shadow-xl">
+    <div className="max-w-3xl mx-auto p-8 mt-10 bg-white border rounded-lg shadow-xl">
       <h1 className="text-5xl mb-8 font-bold text-center text-blue-600">US to UK English Converter</h1>
       <h2 className="text-3xl mb-4 font-semibold text-gray-800">American Input</h2>
       <div
@@ -243,6 +243,9 @@ function App() {
         dangerouslySetInnerHTML={{ __html: outputText }}
       ></div>
     </div>
+    <footer className="text-center mt-8">
+        <p className="text-gray-600">Created by <a href="https://joshmay.xyz" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Josh May</a></p>
+      </footer>
   </>
   );
 }
