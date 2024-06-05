@@ -173,6 +173,15 @@ function App() {
       stories: "storeys",
       specializes: "specialises",
       maximizing: "maximising",
+      personalized: "personalised",
+      analyzing: "analysing",
+      optimizing: "optimising",
+      hiccup: "hiccough",
+      installments: "instalments",
+      practices: "practises",
+      personalization: "personalisation",
+      modernizing: "modernising",
+      customized: "customised",
     };
 
     let convertedText = inputText;
