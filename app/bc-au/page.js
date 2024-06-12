@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
-import Head from 'next/head';
+import Head from "next/head";
 
 function App() {
   const [inputText, setInputText] = useState("");
@@ -173,6 +173,15 @@ function App() {
       stories: "storeys",
       specializes: "specialises",
       maximizing: "maximising",
+      personalized: "personalised",
+      analyzing: "analysing",
+      optimizing: "optimising",
+      hiccup: "hiccough",
+      installments: "instalments",
+      practices: "practises",
+      personalization: "personalisation",
+      modernizing: "modernising",
+      customized: "customised",
     };
 
     let convertedText = inputText;
@@ -194,6 +203,12 @@ function App() {
       });
     }
 
+    // Convert BigCommerce internal links to .co.uk
+    convertedText = convertedText.replace(
+      /https:\/\/www\.bigcommerce\.com/g,
+      "https://www.bigcommerce.com.au"
+    );
+
     setOutputText(convertedText);
   };
 
@@ -212,37 +227,74 @@ function App() {
     window.getSelection().removeAllRanges();
     document.body.removeChild(tempElement);
   };
-
   return (
     <>
       <Head>
-        <title>US to UK English Converter</title>
-        <meta name="description" content="Convert American English to British English easily with our US to UK English converter." />
-        <meta name="keywords" content="US to UK English converter, American to British English, English conversion tool" />
+        <title>
+          US to UK English Converter - Convert American English to British
+          English
+        </title>
+        <meta
+          name="description"
+          content="Easily convert American English to British English with our powerful US to UK English converter tool. Get accurate translations instantly!"
+        />
+        <meta
+          name="keywords"
+          content="US to UK English converter, American to British English, English conversion tool, convert American English, American English to British English"
+        />
       </Head>
-      <div className="max-w-3xl mx-auto p-5 mt-10 text-black">
-        <h1 className="text-4xl mb-5 font-bold text-left">US to UK English Converter</h1>
+      <div className="max-w-5xl mx-auto py-7 mt-10 bg-white border rounded-lg shadow-md">
+        <h1 className="text-3xl font-bold text-left ml-8 text-black">
+          US to UK English Converter
+        </h1>
+      </div>
+      <div className="max-w-5xl mx-auto p-8 mt-5 bg-white border rounded-lg shadow-xl">
+        <h2 className="text-3xl mb-4 font-semibold text-gray-800">
+          American Input
+        </h2>
         <div
-          className="editable-content min-h-[250px] max-h-[550px] p-5 border-2 border-gray-400 rounded mb-5 shadow overflow-y-auto"
+          className="editable-content min-h-[250px] max-h-[550px] p-6 border-2 border-gray-300 rounded-lg mb-6 shadow-md overflow-y-auto focus:outline-none focus:ring-2 focus:ring-blue-500"
           contentEditable
           dangerouslySetInnerHTML={{ __html: inputText }}
           onInput={(e) => setInputText(e.target.innerHTML)}
         ></div>
-        <div className="flex flex-col items-start mt-5 mb-10">
-          <button className="px-6 py-3 text-lg font-bold text-white bg-blue-500 rounded mb-2 transition-colors duration-300 hover:bg-blue-700" onClick={handleConvert}>
+        <div className="flex flex-col space-y-4 mb-8 w-1/3">
+          <button
+            className="w-full px-4 py-2 text-lg font-semibold text-white bg-blue-600 rounded-lg transition-colors duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onClick={handleConvert}
+          >
             Convert to British English
           </button>
-          <button className="px-6 py-3 text-lg font-bold text-white bg-green-500 rounded transition-colors duration-300 hover:bg-green-700" onClick={handleCopy}>
+          <button
+            className="w-full px-4 py-2 text-lg font-semibold text-white bg-green-600 rounded-lg transition-colors duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+            onClick={handleCopy}
+          >
             Copy to Clipboard
           </button>
         </div>
-        <h1 className="text-4xl mb-5 font-bold text-left">British Output</h1>
+        <h2 className="text-3xl mb-4 font-semibold text-gray-800">
+          British Output
+        </h2>
         <div
-          className="editable-content min-h-[250px] max-h-[550px] p-5 border-2 border-gray-400 rounded mb-5 shadow overflow-y-auto"
+          className="editable-content min-h-[250px] max-h-[550px] p-6 border-2 border-gray-300 rounded-lg mb-6 shadow-md overflow-y-auto focus:outline-none focus:ring-2 focus:ring-blue-500"
           contentEditable
           dangerouslySetInnerHTML={{ __html: outputText }}
         ></div>
       </div>
+
+      <footer className="text-center mt-12 my-10">
+        <p className="text-gray-600">
+          Created by{" "}
+          <a
+            href="https://joshmay.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            Josh May
+          </a>
+        </p>
+      </footer>
     </>
   );
 }
