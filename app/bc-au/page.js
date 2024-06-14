@@ -182,6 +182,15 @@ function App() {
       personalization: "personalisation",
       modernizing: "modernising",
       customized: "customised",
+      revolutionizing: "revolutionising",
+      personalizing: "personalising",
+      organizations: "organisations",
+      humanizes: "humanises",
+      inquiries: "enquiries",
+      favoring: "favouring",
+      characterized: "characterised",
+      modernized: "modernised",
+      behaviours: "behaviors",
     };
 
     let convertedText = inputText;
