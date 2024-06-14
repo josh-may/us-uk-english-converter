@@ -193,6 +193,8 @@ function App() {
       behaviours: "behaviors",
     };
 
+    // test
+
     let convertedText = inputText;
     for (const [american, british] of Object.entries(americanToBritishMap)) {
       const regex = new RegExp(
