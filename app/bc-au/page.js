@@ -191,6 +191,20 @@ function App() {
       characterized: "characterised",
       modernized: "modernised",
       behaviours: "behaviors",
+      utilizes: "utilises",
+      emphasizing: "emphasising",
+      grays: "greys",
+      colors: "colours",
+      optimized: "optimised",
+      visualizer: "visualiser",
+      tires: "tyres",
+      emphasizes: "emphasises",
+      prioritizing: "prioritising",
+      unparalleled: "unparallelled",
+      customization: "customisation",
+      organized: "organised",
+      skeptics: "sceptics",
+      minimizing: "minimising",
     };
 
     // test
